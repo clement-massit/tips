@@ -1,6 +1,6 @@
 # Cheat Sheet des Commandes Rsync
 
-## 1. Commande de Base
+## 1. Commande de Base 💻 
 ```bash
 rsync -avz source/ destination/
 ```
@@ -8,7 +8,7 @@ rsync -avz source/ destination/
 - `-v` : Mode verbeux (affiche les fichiers transférés).
 - `-z` : Compression des fichiers pendant le transfert.
 
-## 2. Synchronisation avec un Serveur Distant
+## 2. Synchronisation avec un Serveur Distant 🔁 
 ```bash
 rsync -avz /local/path/ user@remote_host:/remote/path/
 ```
@@ -19,13 +19,13 @@ rsync -avz user@remote_host:/remote/path/ /local/path/
 ```
 - Synchronisation du serveur distant vers le local.
 
-## 3. Suppression des Fichiers Supprimés sur la Source
+## 3. Suppression des Fichiers Supprimés sur la Source ❌ 
 ```bash
 rsync -avz --delete source/ destination/
 ```
 - Supprime les fichiers qui ne sont plus présents dans la source.
 
-## 4. Simulation (Dry Run)
+## 4. Simulation (Dry Run) ▶️
 ```bash
 rsync -avzn source/ destination/
 ```
@@ -35,37 +35,37 @@ rsync -avzn source/ destination/
 rsync -avz --dry-run source/ destination/
 ```
 
-## 5. Exclure des Fichiers ou Répertoires
+## 5. Exclure des Fichiers ou Répertoires 🔧
 ```bash
 rsync -avz --exclude='*.log' --exclude='cache/' source/ destination/
 ```
 - Exclut les fichiers `.log` et le répertoire `cache/`.
 
-## 6. Utilisation avec SSH
+## 6. Utilisation avec SSH 💻 
 ```bash
 rsync -avz -e "ssh -p 2222" source/ user@remote_host:/remote/path/
 ```
 - Spécifie un port SSH différent (`2222`).
 
-## 7. Afficher la Progression du Transfert
+## 7. Afficher la Progression du Transfert 📊 
 ```bash
 rsync -avz --progress source/ destination/
 ```
 - Affiche la progression détaillée des fichiers en cours de transfert.
 
-## 8. Limiter la Bande Passante
+## 8. Limiter la Bande Passante ✂️ 
 ```bash
 rsync -avz --bwlimit=1000 source/ destination/
 ```
 - Limite la vitesse de transfert à 1000 KB/s.
 
-## 9. Synchronisation en Mode Backup avec Horodatage
+## 9. Synchronisation en Mode Backup avec Horodatage 🕙 
 ```bash
 rsync -avz --backup --backup-dir=/backup/$(date +%Y-%m-%d) source/ destination/
 ```
 - Sauvegarde les fichiers modifiés dans un dossier horodaté avant écrasement.
 
-## 10. Planifier une Synchronisation avec Cron
+## 10. Planifier une Synchronisation avec Cron 🕠 
 Ouvrir l'éditeur de cron :
 ```bash
 crontab -e
