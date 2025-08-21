@@ -6,4 +6,4 @@
 
 3. [Veracrypt](https://github.com/clement-massit/tips/blob/main/Veracrypt_sheet.md)
 
-4. [Veracrypt](https://github.com/clement-massit/tips/blob/main/Metriques_LLM.md)
+4. [Metrics LLM](https://github.com/clement-massit/tips/blob/main/Metriques_LLM.md)
